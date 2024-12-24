@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ICU Timetable App</string>
+    <string name="hello_user">Hello, User!</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="submit">Submit</string>
+    <string name="app_logo">App Logo</string>
+    <string name="icu_timetable">ICU Timetable</string>
+</resources>
