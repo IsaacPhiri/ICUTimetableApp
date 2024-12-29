@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.firebase.auth.FirebaseAuth
-import android.widget.Button
 
 class MainActivity : ComponentActivity() {
 
@@ -15,17 +14,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Thread.sleep(1000)
         installSplashScreen()
-        setContentView(R.layout.activity_login)
-       // setContentView(R.layout.activity_main)
 
-        //auth = FirebaseAuth.getInstance()
+        // Check if the user is logged in
+        //val currentUser = FirebaseAuth.getInstance().currentUser
 
-        //val logoutButton: Button = findViewById(R.id.logoutButton)
+        //if (currentUser != null) {
+            // User is logged in, proceed to the main timetable page
+         //   val intent = Intent(this, AdminDashboardActivity::class.java)
+         //   startActivity(intent)
+        //} else {
+            // User is not logged in, navigate to the login page
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        //}
 
-        //logoutButton.setOnClickListener {
-         //   auth.signOut()
-        //    startActivity(Intent(this, LoginActivity::class.java))
-       //     finish()
-       // }
+        // Close the MainActivity so it doesn't stay in the back stack
+        finish()
+
     }
 }
