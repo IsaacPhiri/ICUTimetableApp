@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1070485342221",
+    "project_id": "icu-timetable-app-2208310810",
+    "storage_bucket": "icu-timetable-app-2208310810.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070485342221:android:bb282fcab61b174452ad44",
+        "android_client_info": {
+          "package_name": "com.example.icutimetableapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6WmakoZ09T8riGGpg9s4istCuBiwVffk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
