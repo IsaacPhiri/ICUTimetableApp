@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Enrollments"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/blue"
+        android:textColor="@android:color/white" />
+
+    <!-- Search Field -->
+    <EditText
+        android:id="@+id/search_enrollment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:hint="Search by Student or Program"
+        android:padding="8dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Enrollment List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="ifContentScrolls">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example Enrollment Item -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/student_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Student: John Doe"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/program_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Program: Computer Science"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/edit_enrollment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Edit"
+                    android:src="@android:drawable/ic_menu_edit"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/delete_enrollment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Delete"
+                    android:src="@android:drawable/ic_menu_delete"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Add New Enrollment Button -->
+    <Button
+        android:id="@+id/add_enrollment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Enrollment"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/ic_add"
+        android:padding="8dp" />
+</LinearLayout>
