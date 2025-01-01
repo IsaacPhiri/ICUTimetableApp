@@ -38,5 +38,10 @@ class AdminDashboardActivity : AppCompatActivity() {
         timetableButton.setOnClickListener {
             startActivity(Intent(this, SchoolTimetableActivity::class.java))
         }
+
+        val createCoursesButton: Button = findViewById(R.id.createCourses)
+        createCoursesButton.setOnClickListener {
+            startActivity(Intent(this, CoursesActivity::class.java))
+        }
     }
 }
