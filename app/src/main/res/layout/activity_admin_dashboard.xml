@@ -1,36 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminDashboardActivity">
+    android:background="@color/white"
+    tools:context=".StudentDashboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Dashboard Header -->
         <TextView
-            android:id="@+id/adminWelcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_admin"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal" />
+            android:text="@string/menu"
+            android:fontFamily="@font/googlesans_bold"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:textColor="@color/blue"
+            android:layout_marginBottom="20dp" />
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/logout"
             android:textColor="@color/white"
-            android:background="@color/blue"
-            android:layout_margin="20dp"
-            android:fontFamily="@font/googlesans_bold"/>
+            android:backgroundTint="@color/blue"
+            android:layout_gravity="center"
+            android:fontFamily="@font/googlesans_bold"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp" />
 
+        <!-- Dashboard Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/account"
+                        android:contentDescription="@string/account_icon" />
+
+                    <Button
+                        android:id="@+id/accountButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Accounts"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/course" />
+
+                    <Button
+                        android:id="@+id/courseButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Student Programs"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/timetable"
+                        android:contentDescription="@string/timetable_icon" />
+
+                    <Button
+                        android:id="@+id/timetableButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="School Timetable"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/notification"
+                        android:contentDescription="@string/notification_icon" />
+
+                    <Button
+                        android:id="@+id/alertButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send Alerts"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/timetable"
+                        android:contentDescription="@string/settings_icon" />
+
+                    <Button
+                        android:id="@+id/enrollmentButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Student Enrollments"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/timetable"
+                        android:contentDescription="@string/dashboard_icon" />
+
+                    <Button
+                        android:id="@+id/assignCourses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assign Courses"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/timetable"
+                        android:contentDescription="@string/dashboard_icon" />
+
+                    <Button
+                        android:id="@+id/createCourses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Courses"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
     </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
