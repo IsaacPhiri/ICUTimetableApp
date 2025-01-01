@@ -43,5 +43,15 @@ class AdminDashboardActivity : AppCompatActivity() {
         createCoursesButton.setOnClickListener {
             startActivity(Intent(this, CoursesActivity::class.java))
         }
+
+        val enrollmentButton: Button = findViewById(R.id.enrollmentButton)
+        enrollmentButton.setOnClickListener {
+            startActivity(Intent(this, EnrollmentsActivity::class.java))
+        }
+
+        val assignCourses: Button = findViewById(R.id.assignCourses)
+        assignCourses.setOnClickListener {
+            startActivity(Intent(this, CourseAssignmentActivity::class.java))
+        }
     }
 }
