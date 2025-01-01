@@ -23,5 +23,20 @@ class AdminDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+
+        val accountButton: Button = findViewById(R.id.accountButton)
+        accountButton.setOnClickListener {
+            startActivity(Intent(this, UserAccountsActivity::class.java))
+        }
+
+        val courseButton: Button = findViewById(R.id.courseButton)
+        courseButton.setOnClickListener {
+            startActivity(Intent(this, ProgramsActivity::class.java))
+        }
+
+        val timetableButton: Button = findViewById(R.id.timetableButton)
+        timetableButton.setOnClickListener {
+            startActivity(Intent(this, SchoolTimetableActivity::class.java))
+        }
     }
 }
