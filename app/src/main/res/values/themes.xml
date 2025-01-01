@@ -14,4 +14,11 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/app_logo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.ICUTimetableApp</item>
     </style>
+    <style name="Theme.ICUTimetableApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ICUTimetableApp.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ICUTimetableApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
