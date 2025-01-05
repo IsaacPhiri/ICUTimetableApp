@@ -49,14 +49,16 @@ interface ApiService {
     @DELETE("courses.php/{id}")
     fun deleteCourse(@Path("id") id: Int): Call<Void>
 
+    // Program endpoints
     @GET("programs.php")
     fun getPrograms(): Call<List<Program>>
 
     @POST("programs.php")
-    fun addProgram(@Body program: ProgramRequest): Call<Void>
+    @Headers("Content-Type: application/json")
+    fun addProgram(@Body program: Program): Call<Void>
 
     @PUT("programs.php/{id}")
-    fun updateProgram(@Path("id") id: Int, @Body program: ProgramRequest): Call<Void>
+    fun updateProgram(@Path("id") id: Int, @Body program: Program): Call<Void>
 
     @DELETE("programs.php/{id}")
     fun deleteProgram(@Path("id") id: Int): Call<Void>
