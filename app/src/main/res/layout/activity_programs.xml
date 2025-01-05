@@ -53,35 +53,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Create" />
+                android:text="Create"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn_update_program"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Update" />
+                android:text="Update"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn_delete_program"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete" />
+                android:text="Delete"
+                tools:ignore="ButtonStyle" />
         </LinearLayout>
 
-        <!-- List of Programs -->
-        <TextView
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Programs"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp" />
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-        <ListView
-            android:id="@+id/lv_programs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:dividerHeight="1dp" />
+            <!-- List of Programs -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPrograms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>

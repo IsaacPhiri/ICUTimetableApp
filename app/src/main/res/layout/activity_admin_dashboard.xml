@@ -18,7 +18,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/menu"
-            android:fontFamily="@font/googlesans_bold"
             android:textSize="24sp"
             android:layout_gravity="center"
             android:textColor="@color/blue"
@@ -33,7 +32,6 @@
             android:textColor="@color/white"
             android:backgroundTint="@color/blue"
             android:layout_gravity="center"
-            android:fontFamily="@font/googlesans_bold"
             android:padding="10dp"
             android:layout_marginBottom="20dp" />
 
@@ -73,7 +71,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="User Accounts"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -107,7 +104,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Student Programs"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -141,7 +137,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="School Timetable"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -175,7 +170,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Send Alerts"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -209,7 +203,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Student Enrollments"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -243,7 +236,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Assign Courses"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -275,7 +267,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Create Courses"
-                        android:fontFamily="@font/googlesans_bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
