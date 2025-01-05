@@ -28,6 +28,4 @@
             android:layout_height="wrap_content"
             android:text="Email" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
