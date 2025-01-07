@@ -41,7 +41,7 @@ interface ApiService {
     fun getCourses(): Call<List<Course>>
 
     @POST("courses.php")
-    fun addCourse(@Body course: CourseRequest): Call<Void>
+    fun addCourse(@Body course: Course): Call<Void>
 
     @PUT("courses.php/{id}")
     fun updateCourse(@Path("id") id: Int, @Body course: CourseRequest): Call<Void>
