@@ -1,6 +1,7 @@
 package com.example.icutimetableapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -40,13 +41,13 @@ class ProgramsActivity : AppCompatActivity() {
                 programName = programName.text.toString(),
                 description = programDescription.text.toString()
             )
-
+            Log.d("ProgramsActivity", "Name: $programName, Description: $programDescription")
             apiService.addProgram(program).enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    Log.d("ProgramsActivity", "Name: $programName, Description: $programDescription")
                     if (response.isSuccessful) {
                         Toast.makeText(this@ProgramsActivity, "Program created successfully!", Toast.LENGTH_SHORT).show()
-                        //fetchPrograms()
-                        finish() // Close the activity
+                        fetchPrograms()
                     } else {
                         Toast.makeText(this@ProgramsActivity, "Failed to create program", Toast.LENGTH_SHORT).show()
                     }
