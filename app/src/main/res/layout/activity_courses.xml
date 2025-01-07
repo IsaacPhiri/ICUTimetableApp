@@ -79,19 +79,24 @@
         </LinearLayout>
 
         <!-- Courses List -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Courses"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
-
-        <ListView
-            android:id="@+id/list_courses"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp"
-            tools:ignore="NestedScrolling" />
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Courses"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
