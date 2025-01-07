@@ -1,7 +1,14 @@
 package com.example.icutimetableapp
 
-data class Course (
+import com.google.gson.annotations.SerializedName
+
+data class Course(
+    @SerializedName("course_id")
     val courseId: Int?,
+    @SerializedName("course_name")
     val courseName: String,
-    val programId: Int
+    @SerializedName("program_id")
+    val programId: Int?,
+    @SerializedName("program_name")
+    val programName: String
 )
