@@ -60,7 +60,7 @@ class UserAccountsActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
                         Toast.makeText(this@UserAccountsActivity, "User created successfully!", Toast.LENGTH_SHORT).show()
-                        finish() // Close the activity
+                        fetchUsers()
                     } else {
                         Toast.makeText(this@UserAccountsActivity, "Failed to create user", Toast.LENGTH_SHORT).show()
                     }
