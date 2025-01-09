@@ -12,23 +12,37 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <!-- Timetable ID (Read-Only) -->
-        <EditText
-            android:id="@+id/et_timetable_id"
+        <!-- Course ID -->
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
-            android:enabled="false"
-            android:hint="Timetable ID"
+            android:text="Course"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_course_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:spinnerMode="dropdown"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <!-- Course ID -->
-        <EditText
-            android:id="@+id/et_course_id"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Course ID"
-            android:inputType="number"
+            android:text="Lecturer"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:spinnerMode="dropdown"
             tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Day -->
@@ -67,6 +81,7 @@
             android:id="@+id/et_room"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="Room"
             android:hint="Room Name/Number"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
@@ -84,20 +99,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Create" />
+                android:text="Create"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn_update_timetable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Update" />
+                android:text="Update"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn_delete_timetable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete" />
+                android:text="Delete"
+                tools:ignore="ButtonStyle" />
         </LinearLayout>
 
     <LinearLayout
@@ -115,11 +133,10 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp" />
 
-        <ListView
-            android:id="@+id/lv_timetable"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTimetables"
             android:layout_width="match_parent"
-            android:layout_height="251dp"
-            android:dividerHeight="1dp" />
+            android:layout_height="wrap_content" />
 
         <!-- Calendar View -->
         <CalendarView
