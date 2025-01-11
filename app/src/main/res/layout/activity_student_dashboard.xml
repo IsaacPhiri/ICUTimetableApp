@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/menu"
+            android:text="Student Dashboard"
             android:textSize="24sp"
             android:layout_gravity="center"
             android:textColor="@color/blue"
@@ -66,10 +66,11 @@
                         android:src="@drawable/account"
                         android:contentDescription="@string/account_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/accountButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Account"
+                        android:text="Profile"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -95,13 +96,14 @@
                     <ImageView
                         android:layout_width="54dp"
                         android:layout_height="54dp"
-                        android:src="@drawable/course"
-                        android:contentDescription="@string/course_icon" />
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/course" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/courseButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Courses"
+                        android:text="Student Programs"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -130,10 +132,11 @@
                         android:src="@drawable/timetable"
                         android:contentDescription="@string/timetable_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/timetableButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/timetable"
+                        android:text="My Timetable"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -162,10 +165,11 @@
                         android:src="@drawable/notification"
                         android:contentDescription="@string/notification_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/alertButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/notifications"
+                        android:text="Send Alerts"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -194,10 +198,11 @@
                         android:src="@drawable/timetable"
                         android:contentDescription="@string/settings_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/enrollmentButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/settings"
+                        android:text="Student Enrollments"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -226,10 +231,42 @@
                         android:src="@drawable/timetable"
                         android:contentDescription="@string/dashboard_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/assignCourses"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/dashboard"
+                        android:text="Assign Courses"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@drawable/timetable"
+                        android:contentDescription="@string/dashboard_icon" />
+
+                    <Button
+                        android:id="@+id/createCourses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Courses"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
