@@ -23,5 +23,10 @@ class StudentDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+
+        val timetableButton: Button = findViewById(R.id.timetableButton)
+        timetableButton.setOnClickListener {
+            startActivity(Intent(this, StudentTimetableActivity::class.java))
+        }
     }
 }
