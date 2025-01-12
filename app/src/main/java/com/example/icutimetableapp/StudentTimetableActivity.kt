@@ -34,7 +34,7 @@ class StudentTimetableActivity : AppCompatActivity() {
     }
 
     private fun fetchTimetable() {
-        apiService.getAllTimetables().enqueue(object : Callback<List<Timetable>> {
+        apiService.getStudentTimetable().enqueue(object : Callback<List<Timetable>> {
             override fun onResponse(call: Call<List<Timetable>>, response: Response<List<Timetable>>) {
                 if (response.isSuccessful) {
                     timetableAdapter.updateData(response.body() ?: listOf())
