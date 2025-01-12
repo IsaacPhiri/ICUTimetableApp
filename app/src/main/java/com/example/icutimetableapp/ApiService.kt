@@ -28,6 +28,9 @@ interface ApiService {
     @GET("timetable.php")
     fun getAllTimetables(): Call<List<Timetable>>
 
+    @GET("student_timetable.php")
+    fun getStudentTimetable(): Call<List<Timetable>>
+
     @GET("timetable.php/date/{date}")
     fun getTimetableByDate(@Path("date") date: String): Call<List<Timetable>>
 
