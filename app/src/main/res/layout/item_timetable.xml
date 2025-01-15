@@ -23,18 +23,6 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewFirstname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Firstname" />
-
-        <TextView
-            android:id="@+id/textViewLastname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lastname" />
-
-        <TextView
             android:id="@+id/textViewDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,5 +39,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Room" />
+
+        <TextView
+            android:id="@+id/textViewFirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Firstname" />
+
+        <TextView
+            android:id="@+id/textViewLastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lastname" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
