@@ -67,4 +67,8 @@ dependencies {
     implementation(libs.firebase.database.ktx)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(platform(libs.firebase.bom.v3211))
+    implementation(libs.google.firebase.auth)
+    implementation(libs.volley)
+
 }
