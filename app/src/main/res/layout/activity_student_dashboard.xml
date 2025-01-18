@@ -100,10 +100,10 @@
                         android:src="@drawable/course" />
 
                     <Button
-                        android:id="@+id/courseButton"
+                        android:id="@+id/coursesButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Student Programs"
+                        android:text="My Courses"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -169,7 +169,7 @@
                         android:id="@+id/alertButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Send Alerts"
+                        android:text="Alerts"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
@@ -177,70 +177,6 @@
             </androidx.cardview.widget.CardView>
 
             <!-- Card 3 -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/blue"
-                android:layout_margin="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="54dp"
-                        android:layout_height="54dp"
-                        android:src="@drawable/timetable"
-                        android:contentDescription="@string/settings_icon" />
-
-                    <Button
-                        android:id="@+id/enrollmentButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Student Enrollments"
-                        android:textSize="18sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="10dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Card 3 -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/blue"
-                android:layout_margin="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="54dp"
-                        android:layout_height="54dp"
-                        android:src="@drawable/timetable"
-                        android:contentDescription="@string/dashboard_icon" />
-
-                    <Button
-                        android:id="@+id/assignCourses"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Assign Courses"
-                        android:textSize="18sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="10dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -266,7 +202,7 @@
                         android:id="@+id/createCourses"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Create Courses"
+                        android:text="Settings"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:layout_marginTop="10dp" />
