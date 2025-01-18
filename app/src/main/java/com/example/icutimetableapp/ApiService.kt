@@ -8,6 +8,10 @@ interface ApiService {
     @GET("users.php")
     fun getUsers(): Call<List<User>>
 
+    // Fetch a single user
+    @GET("users.php/{id}")
+    fun getUser(@Path("id") userId: String): Call<User>
+
     // Create a new user
     @POST("users.php")
     @Headers("Content-Type: application/json")
