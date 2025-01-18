@@ -33,7 +33,7 @@ interface ApiService {
     fun getAllTimetables(): Call<List<Timetable>>
 
     @GET("student_timetable.php")
-    fun getStudentTimetable(): Call<List<Timetable>>
+    fun getStudentTimetable(userId: String): Call<List<Timetable>>
 
     @GET("timetable.php/date/{date}")
     fun getTimetableByDate(@Path("date") date: String): Call<List<Timetable>>
@@ -81,5 +81,9 @@ interface ApiService {
 
     @GET("timetable.php/{id}")
     fun getTimetableById(@Path("id") id: Int): Call<Timetable>
+
+    //Fetch enrollments
+    @GET("enrollments.php/{id}")
+    fun getStudentCourses(@Path("id") userId: String): Call<List<Course>>
 
 }
