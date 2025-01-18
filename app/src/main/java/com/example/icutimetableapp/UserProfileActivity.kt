@@ -2,6 +2,7 @@ package com.example.icutimetableapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +19,9 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        auth = FirebaseAuth.getInstance()
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_user_profile)
@@ -27,8 +31,6 @@ class UserProfileActivity : AppCompatActivity() {
 
         // Fetch user profile
         fetchUserProfile()
-
-        auth = FirebaseAuth.getInstance()
 
         val logoutButton: Button = findViewById(R.id.logoutButton)
 
@@ -44,20 +46,26 @@ class UserProfileActivity : AppCompatActivity() {
 
         apiService.getUser(userId).enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
+                Log.d("UserProfileActivity", "Response: $response")
                 if (response.isSuccessful) {
                     val user = response.body()
+                    Log.d("UserProfileActivity", "User: $user")
                     if (user != null) {
                         displayUserProfile(user)
                     } else {
                         Toast.makeText(this@UserProfileActivity, "User not found", Toast.LENGTH_SHORT).show()
                     }
                 } else {
+                    Log.e("UserProfileActivity", "Error: ${response.code()}")
                     Toast.makeText(this@UserProfileActivity, "Failed to fetch profile", Toast.LENGTH_SHORT).show()
+                    Log.e("UserProfileActivity", "Error: ${response.code()}")
                 }
             }
 
             override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("UserProfileActivity", "Error: ${t.message}")
                 Toast.makeText(this@UserProfileActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                Log.e("UserProfileActivity", "Error: ${t.message}")
             }
         })
     }
@@ -75,7 +83,13 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun getLoggedInUserId(): String {
-        // Replace this with your logic to fetch the logged-in user's ID from Firebase or shared preferences
-        return "user-id-placeholder"
+        val user = auth.currentUser
+        if (user != null) {
+            return user.uid
+        }
+        else {
+            Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
+        }
+        return ""
     }
 }
