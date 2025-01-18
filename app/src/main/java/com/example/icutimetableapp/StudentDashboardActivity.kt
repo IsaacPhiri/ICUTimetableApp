@@ -28,5 +28,10 @@ class StudentDashboardActivity : AppCompatActivity() {
         timetableButton.setOnClickListener {
             startActivity(Intent(this, StudentTimetableActivity::class.java))
         }
+
+        val userProfileButton: Button = findViewById(R.id.accountButton)
+        userProfileButton.setOnClickListener {
+            startActivity(Intent(this, UserProfileActivity::class.java))
+        }
     }
 }
