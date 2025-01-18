@@ -33,5 +33,10 @@ class StudentDashboardActivity : AppCompatActivity() {
         userProfileButton.setOnClickListener {
             startActivity(Intent(this, UserProfileActivity::class.java))
         }
+
+        val coursesButton: Button = findViewById(R.id.coursesButton)
+        coursesButton.setOnClickListener {
+            startActivity(Intent(this, StudentCoursesActivity::class.java))
+        }
     }
 }
