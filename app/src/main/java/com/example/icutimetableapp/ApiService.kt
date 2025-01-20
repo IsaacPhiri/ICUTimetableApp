@@ -86,4 +86,8 @@ interface ApiService {
     @GET("enrollments.php/{id}")
     fun getStudentCourses(@Path("id") userId: String): Call<List<Course>>
 
+    // Fetch assigned courses
+    @GET("assigned_courses.php/{id}")
+    fun getAssignedCourses(@Path("user_id") userId: String): Call<List<AssignedCourse>>
+
 }
