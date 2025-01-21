@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class Timetable(
     @SerializedName("timetable_id")
     val timetableId: Int? = null,
-    @SerializedName("courseName")
+    @SerializedName("course_name")
     val courseName: String,
     @SerializedName("day")
     val day: String,
@@ -17,8 +17,8 @@ data class Timetable(
     val firstName: String,
     @SerializedName("last_name")
     val lastName: String,
-    @SerializedName("userId")
-    val userId: Int?,
+    @SerializedName("user_id")
+    val userId: String,
     @SerializedName("courseId")
     val courseId: Int?
 )
