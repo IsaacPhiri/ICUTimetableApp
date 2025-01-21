@@ -45,7 +45,7 @@ class SchoolTimetableActivity : AppCompatActivity() {
         createTimetableButton.setOnClickListener {
 
             val selectedCourse = courseIdSpinner.selectedItem?.toString()?.toIntOrNull()
-            val selectedUser = userIdSpinner.selectedItem?.toString()?.toIntOrNull()
+            val selectedUser = userIdSpinner.selectedItem?.toString()
 
             if (selectedCourse == null || selectedUser == null) {
                 Toast.makeText(this, "Please select a valid Course ID and User ID", Toast.LENGTH_SHORT)
@@ -105,7 +105,7 @@ class SchoolTimetableActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 if (response.isSuccessful) {
                     val users = response.body() ?: listOf()
-                    val userIds = users.map { it.user_id } // Convert IDs to strings
+                    val userIds = users.map { it.user_id }
                     val userAdapter = ArrayAdapter(
                         this@SchoolTimetableActivity,
                         android.R.layout.simple_spinner_item,
