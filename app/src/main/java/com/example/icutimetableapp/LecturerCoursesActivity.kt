@@ -51,7 +51,7 @@ class LecturerCoursesActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<AssignedCourse>>, t: Throwable) {
-                Log.e("LecturerCourseActivity", "Error fetching curses", t)
+                Log.e("LecturerCourseActivity", "Error fetching courses", t)
                 Toast.makeText(this@LecturerCoursesActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
