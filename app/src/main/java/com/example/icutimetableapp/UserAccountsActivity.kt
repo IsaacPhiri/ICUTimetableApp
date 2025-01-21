@@ -54,6 +54,8 @@ class UserAccountsActivity : AppCompatActivity() {
                 phone_number = phoneNumber.text.toString(),
                 date_of_birth = dateOfBirth.text.toString(),
                 address = address.text.toString(),
+                registration_date = null,
+                user_id = ""
             )
 
             apiService.createUser(user).enqueue(object : Callback<Void> {
