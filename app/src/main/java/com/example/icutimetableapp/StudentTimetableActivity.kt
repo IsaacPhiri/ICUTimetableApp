@@ -40,32 +40,34 @@ class StudentTimetableActivity : AppCompatActivity() {
 
     private fun fetchTimetable() {
         val userId = getLoggedInUserId()
+            ?: // Don't proceed if the user is not logged in
+            return
+
         apiService.getStudentTimetable(userId).enqueue(object : Callback<List<Timetable>> {
             override fun onResponse(call: Call<List<Timetable>>, response: Response<List<Timetable>>) {
                 if (response.isSuccessful) {
                     timetableAdapter.updateData(response.body() ?: listOf())
                 } else {
                     Toast.makeText(this@StudentTimetableActivity, "Failed to fetch sessions", Toast.LENGTH_SHORT).show()
-                    Log.e("SchoolTimetableActivity", "Error fetching timetables: ${response.code()}")
+                    Log.e("StudentTimetableActivity", "Error fetching timetables: ${response.code()}")
                 }
             }
 
             override fun onFailure(call: Call<List<Timetable>>, t: Throwable) {
-                Log.e("SchoolTimetableActivity", "Error fetching timetables", t)
+                Log.e("StudentTimetableActivity", "Error fetching timetables", t)
                 Toast.makeText(this@StudentTimetableActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-    private fun getLoggedInUserId(): String {
+    private fun getLoggedInUserId(): String? {
         val user = auth.currentUser
         if (user != null) {
             return user.uid
-        }
-        else {
+        } else {
             Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
             Log.e("StudentTimetableActivity", "User not logged in")
+            return null
         }
-        return ""
     }
 }
