@@ -1,5 +1,6 @@
 package com.example.icutimetableapp
 
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -9,8 +10,8 @@ interface ApiService {
     fun getUsers(): Call<List<User>>
 
     // Fetch a single user
-    @GET("users.php/{id}")
-    fun getUser(@Path("id") userId: String): Call<User>
+    @GET("user.php/{user_id}")
+    fun getUser(@Query("user_id", encoded = true) userId: String): Call<User>
 
     // Create a new user
     @POST("users.php")
@@ -33,7 +34,10 @@ interface ApiService {
     fun getAllTimetables(): Call<List<Timetable>>
 
     @GET("student_timetable.php/{id}")
-    fun getStudentTimetable(@Path("id") userId: String): Call<List<Timetable>>
+    fun getStudentTimetable(@Query("userId") userId: String): Call<ResponseBody>
+
+//    @GET("student_timetable.php/{id}")
+//    fun getStudentTimetable(@Path("id") userId: String): Call<List<Timetable>>
 
     @GET("timetable.php/date/{date}")
     fun getTimetableByDate(@Path("date") date: String): Call<List<Timetable>>
@@ -84,10 +88,10 @@ interface ApiService {
 
     //Fetch enrollments
     @GET("enrollments.php/{id}")
-    fun getStudentCourses(@Path("id") userId: String): Call<List<Course>>
+    fun getStudentCourses(@Query("id") userId: String): Call<List<Course>>
 
     // Fetch assigned courses
     @GET("assignedcourses.php/{id}")
-    fun getAssignedCourses(@Path("id") userId: String): Call<List<AssignedCourse>>
+    fun getAssignedCourses(@Query("id") userId: String): Call<List<AssignedCourse>>
 
 }
