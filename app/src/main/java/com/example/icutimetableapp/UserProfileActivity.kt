@@ -44,8 +44,14 @@ class UserProfileActivity : AppCompatActivity() {
     private fun fetchUserProfile() {
         val userId = getLoggedInUserId() // Replace with the method to get the logged-in user's ID
 
+        if (userId.isEmpty()) {
+            return
+        }
+
         apiService.getUser(userId).enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
+                Log.d("ResponseBody", response.body()?.toString() ?: "No body")
+                Log.d("RawJson", response.errorBody()?.string() ?: "No error body")
                 Log.d("UserProfileActivity", "Response: $response")
                 if (response.isSuccessful) {
                     val user = response.body()
@@ -56,6 +62,9 @@ class UserProfileActivity : AppCompatActivity() {
                         Toast.makeText(this@UserProfileActivity, "User not found", Toast.LENGTH_SHORT).show()
                     }
                 } else {
+                    Log.d("ResponseBody", response.body()?.toString() ?: "No body")
+                    Log.d("RawJson", response.errorBody()?.string() ?: "No error body")
+                    Log.d("UserProfileActivity", "Response: $response")
                     Log.e("UserProfileActivity", "Error: ${response.code()}")
                     Toast.makeText(this@UserProfileActivity, "Failed to fetch profile", Toast.LENGTH_SHORT).show()
                     Log.e("UserProfileActivity", "Error: ${response.code()}")
