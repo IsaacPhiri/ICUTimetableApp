@@ -1,4 +1,4 @@
-package com.isaacphiri22081310810.icutimetableapp
+package com.isaacphiri2208310810.icutimetableapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.isaacphiri22081310810.icutimetableapp", appContext.packageName)
+        assertEquals("com.isaacphiri2208310810.icutimetableapp", appContext.packageName)
     }
 }
