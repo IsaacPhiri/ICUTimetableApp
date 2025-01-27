@@ -1,4 +1,4 @@
-package com.isaacphiri22081310810.icutimetableapp
+package com.isaacphiri2208310810.icutimetableapp
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
