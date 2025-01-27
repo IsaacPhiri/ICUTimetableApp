@@ -142,6 +142,26 @@ git clone https://github.com/IsaacPhiri/ICUTimetableApp.git
 ./gradlew connectedAndroidTest
 ```
 
+### Test Accounts
+
+For testing purposes, you can use the following credentials:
+
+```
+Admin Account:
+Email: admin@email.com
+Password: adminUser
+
+Student Account:
+Email: student@email.com
+Password: studentUser
+
+Lecturer Account:
+Email: lecturer@email.com
+Password: lecturerUser
+```
+
+**Note**: These are test accounts only. For production use, please create your own account or contact your institution's administrator.
+
 ## Known Issues
 
 1. Build Issues
