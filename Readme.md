@@ -111,7 +111,7 @@ git clone https://github.com/IsaacPhiri/ICUTimetableApp.git
    - Enable Authentication and Cloud Messaging
 
 3. Configure API endpoint:
-   - Update `Constants.BASE_URL` with your backend URL
+   - Update `Constants.BASE_URL` with `[api connection link for where you will host this API and Database](https://github.com/IsaacPhiri/icutimetableapp_api)`. (API and Database not yet hosted - Still searching for a free/affordable hosting service)
 
 4. Build and run:
    - Open in Android Studio
